@@ -192,6 +192,7 @@ nav h1 {
     padding-right: 10px;
     flex-grow: 1;
 }
+
 .boxAnimate {
     animation: lePushReleaseFrom 2s;
 }
@@ -262,12 +263,19 @@ nav h1 {
     text-align: center;
 }
 .serviceAnimate {
-    animation: zoomIn 1.7s;
+    animation: doorCloseFromLeft 2s;
 }
-@keyframes zoomIn {
+@keyframes doorCloseFromLeft {
     from {
-        transform: scale(10);
+        transform: perspective(400px) rotateY(90deg);
+        transform-origin: left;
         opacity: 0;
+    }
+    50%,
+    to {
+        transform: perspective(400px) rotateY(0deg);
+        transform-origin: left;
+        opacity: 1;
     }
 }
 .service-image {
@@ -392,14 +400,18 @@ footer p {
     padding-bottom: 50px;
 }
 .projects img {
-    width: 25%;
+    width: 100%;
 }
 .projectAnimate {
-    animation: moveFromBottom 2s;
+    animation: fadeInLeft 3s;
 }
-@keyframes moveFromBottom {
+@keyframes fadeInLeft {
     from {
-        transform: translateY(800px);
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
     }
 }
 .anim1 {
@@ -549,5 +561,18 @@ footer p {
         100% {
             transform: translate(100px, -100px) rotate(180deg);
         }
+    }
+}
+.projects a {
+    display: inline-block;
+    width: fit-content;
+    width: 25%;
+}
+@media (max-width: 400px) {
+    .box {
+        flex-grow: 0;
+    }
+    #projects {
+        font-size: 17px;
     }
 }
