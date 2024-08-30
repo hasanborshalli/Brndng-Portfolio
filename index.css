@@ -575,4 +575,16 @@ footer p {
     #projects {
         font-size: 17px;
     }
+    .footer-name {
+        font-size: 20px;
+    }
+    footer h2 {
+        font-size: 15px;
+    }
+    footer p {
+        font-size: 12px;
+    }
+    .social img {
+        width: 20px;
+    }
 }
