@@ -81,6 +81,9 @@ nav h1 {
 }
 .links ul li:hover {
     font-weight: 700;
+    text-decoration: underline solid 2px;
+    text-underline-offset: 7px;
+    text-decoration-color: #ff914d;
     transition: 0.6s ease;
 }
 .hidden-links ul {
@@ -104,6 +107,9 @@ nav h1 {
 }
 .active {
     font-weight: 700;
+    text-decoration: underline solid 2px;
+    text-underline-offset: 7px;
+    text-decoration-color: #ff914d;
 }
 .text {
     width: 50%;
@@ -291,8 +297,9 @@ nav h1 {
 footer {
     width: 100%;
     min-height: 300px;
-    background-color: #ff6709;
-    border-radius: 15px;
+    background: linear-gradient(to bottom, #fa9454 10%, #ff6709);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     box-shadow: 1px 1px 5px 5px rgb(200, 198, 198);
     color: white;
     display: flex;
@@ -393,10 +400,10 @@ footer p {
 .projects {
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 5%;
+    gap: 10%;
     padding-bottom: 50px;
 }
 .projects img {
@@ -566,7 +573,7 @@ footer p {
 .projects a {
     display: inline-block;
     width: fit-content;
-    width: 25%;
+    width: 20%;
 }
 @media (max-width: 400px) {
     .box {

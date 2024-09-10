@@ -99,3 +99,29 @@ function showLinks() {
         hiddenLinks.classList.remove("remove");
     }
 }
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        const navHeight = document.querySelector("nav").offsetHeight; // Get the height of the fixed navbar
+        const targetPosition =
+            target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+        const startPosition = window.pageYOffset;
+        const duration = 1000; // Duration in milliseconds
+        const startTime = performance.now();
+
+        function scrollAnimation(currentTime) {
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / duration, 1);
+            window.scrollTo(
+                0,
+                startPosition + (targetPosition - startPosition) * progress
+            );
+            if (timeElapsed < duration) {
+                requestAnimationFrame(scrollAnimation);
+            }
+        }
+
+        requestAnimationFrame(scrollAnimation);
+    });
+});
