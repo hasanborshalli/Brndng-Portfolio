@@ -7,7 +7,7 @@ body {
     background-color: whitesmoke;
 }
 .main {
-    width: 400px;
+    width: 450px;
     position: relative;
 }
 .background {
@@ -30,7 +30,7 @@ body {
 .button {
     width: 100%;
     position: absolute;
-    bottom: 20px;
+    bottom: 7%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,11 +45,13 @@ body {
     font-weight: 700;
     cursor: pointer;
 }
-@media (max-width: 420px) {
+@media (max-width: 450px) {
     .main {
-        width: 300px;
+        width: 100%;
     }
+}
+@media (max-width: 400px) {
     .head {
-        font-size: 11px;
+        font-size: 13px;
     }
 }
