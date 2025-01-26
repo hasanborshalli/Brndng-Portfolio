@@ -1,3 +1,11 @@
+window.addEventListener("load", () => {
+    // Hide the loader
+    document.querySelector(".loader").style.display = "none";
+
+    // Show the main content
+    document.querySelector(".main").style.display = "block";
+});
+
 const burgerButton = document.getElementById("burger");
 const hiddenLinks = document.getElementById("hidden-links");
 
@@ -36,12 +44,12 @@ function changeLinks(elements, observer) {
                 document.querySelector(".pic").classList.add("picAnimate");
             }
             if (element.target.className == "about") {
-                document.querySelectorAll(".box").forEach((box) => {
+                document.querySelectorAll(".container").forEach((box) => {
                     box.classList.add("boxAnimate");
                 });
             }
             if (element.target.className == "services") {
-                document.querySelectorAll(".service").forEach((service) => {
+                document.querySelectorAll(".card").forEach((service) => {
                     service.classList.add("serviceAnimate");
                 });
             }

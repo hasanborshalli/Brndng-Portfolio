@@ -26,7 +26,7 @@ nav {
     position: sticky;
     top: 0;
     background-color: white;
-    z-index: 4;
+    z-index: 11;
 }
 nav h1 {
     font-family: "Archivo Black", "sans-serif" !important;
@@ -121,7 +121,73 @@ nav h1 {
     padding-top: 30px;
     flex-wrap: wrap;
 }
-.box {
+.container {
+    margin: 0 auto 30px auto;
+}
+
+.card-about {
+    position: relative;
+    width: 30%;
+    min-width: 300px;
+    max-width: 350px;
+    height: 400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+}
+
+.face {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 10px 0;
+    font-family: "Archivo Black", "sans-serif";
+}
+
+.face.back {
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.face.back b {
+    margin: 0;
+    padding: 0;
+}
+
+.face.front {
+    transition: 0.5s;
+}
+
+.face.front b {
+    margin: 0;
+    padding: 0;
+    font-size: 35px;
+    color: black;
+    transition: 0.5s;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.card-about:hover .face.front {
+    height: 75px;
+}
+
+.card-about:hover .face.front b {
+    font-size: 30px;
+}
+
+.face.front {
+    background-image: url("img/back1.jpeg");
+    border-radius: 15px;
+    text-align: center;
+}
+/* .box {
     border: 2px solid rgb(161, 161, 161);
     width: 30%;
     min-width: 300px;
@@ -148,7 +214,7 @@ nav h1 {
 .box h1 {
     width: 90%;
     text-align: center;
-}
+} */
 .header {
     margin-top: 30px;
     color: #ff914d;
@@ -170,12 +236,75 @@ nav h1 {
     width: 100%;
     justify-content: center;
     align-items: center;
-    gap: 3%;
+    gap: 5%;
     padding-bottom: 30px;
     padding-top: 30px;
     flex-wrap: wrap;
 }
-.service {
+.card {
+    position: relative;
+    width: 40%;
+    min-width: 300px;
+    height: 300px;
+    background-image: url("img/back1.jpeg");
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    margin-bottom: 40px;
+}
+
+.card img {
+    width: 68px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover {
+    transform: rotate(-5deg) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover .card__content {
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 1;
+}
+
+.card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+}
+
+.card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+}
+
+.card:hover svg {
+    scale: 0;
+    transform: rotate(-45deg);
+}
+/* .service {
     width: 40%;
     min-width: 300px;
     display: flex;
@@ -185,14 +314,14 @@ nav h1 {
     margin-bottom: 20px;
     flex-grow: 1;
     text-align: center;
-}
+} */
 
-.service-image {
+/* .service-image {
     width: 80px;
-}
-.service p {
+} */
+/* .service p {
     width: 80%;
-}
+} */
 footer {
     width: 100%;
     min-height: 300px;
@@ -316,4 +445,72 @@ footer p {
     display: inline-block;
     width: fit-content;
     width: 20%;
+}
+
+.loader {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    border-radius: 50%;
+    color: black;
+    background: currentColor;
+    box-shadow: 32px 0, -32px 0, 64px 0;
+}
+
+.loader::after {
+    content: "";
+    position: absolute;
+    left: -32px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 10px;
+    background: #ff3d00;
+    animation: move_351 3s linear infinite alternate;
+}
+
+@keyframes move_351 {
+    0%,
+    5% {
+        left: -32px;
+        width: 16px;
+    }
+
+    15%,
+    20% {
+        left: -32px;
+        width: 48px;
+    }
+
+    30%,
+    35% {
+        left: 0px;
+        width: 16px;
+    }
+
+    45%,
+    50% {
+        left: 0px;
+        width: 48px;
+    }
+
+    60%,
+    65% {
+        left: 32px;
+        width: 16px;
+    }
+
+    75%,
+    80% {
+        left: 32px;
+        width: 48px;
+    }
+
+    95%,
+    100% {
+        left: 64px;
+        width: 16px;
+    }
 }

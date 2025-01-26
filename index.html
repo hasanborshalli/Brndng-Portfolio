@@ -77,224 +77,366 @@
         <link rel="stylesheet" href="media-queries.css" />
     </head>
     <body>
-        <nav>
-            <h1>Brndng<span style="color: #ff914d">.</span></h1>
-            <div class="links" id="links">
+        <div class="loader"></div>
+
+        <section class="main" style="display: none">
+            <nav>
+                <h1>Brndng<span style="color: #ff914d">.</span></h1>
+                <div class="links" id="links">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="ebook.html">Get Your Free E-book?</a></li>
+                    </ul>
+                </div>
+                <button class="burger-bar" id="burger" onclick="showLinks()">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </nav>
+            <div class="hidden-links" id="hidden-links">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="ebook.html">Get Your Free E-book?</a></li>
+                    <li onclick="showLinks()"><a href="#home">Home</a></li>
+                    <li onclick="showLinks()"><a href="#about">About Us</a></li>
+                    <li onclick="showLinks()">
+                        <a href="#services">Services</a>
+                    </li>
+                    <li onclick="showLinks()">
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li onclick="showLinks()">
+                        <a href="ebook.html">Get Your Free E-book?</a>
+                    </li>
                 </ul>
             </div>
-            <button class="burger-bar" id="burger" onclick="showLinks()">
-                <i class="fa fa-bars"></i>
-            </button>
-        </nav>
-        <div class="hidden-links" id="hidden-links">
-            <ul>
-                <li onclick="showLinks()"><a href="#home">Home</a></li>
-                <li onclick="showLinks()"><a href="#about">About Us</a></li>
-                <li onclick="showLinks()"><a href="#services">Services</a></li>
-                <li onclick="showLinks()"><a href="#projects">Projects</a></li>
-                <li onclick="showLinks()">
-                    <a href="ebook.html">Get Your Free E-book?</a>
-                </li>
-            </ul>
-        </div>
-        <section class="home" id="home">
-            <div class="text">
-                <div class="you-container">
-                    <h1 class="you">You</h1>
+            <section class="home" id="home">
+                <div class="text">
+                    <div class="you-container">
+                        <h1 class="you">You</h1>
+                    </div>
+                    <div class="dream-container">
+                        <h1 class="dream">Dream</h1>
+                    </div>
+                    <h1>We <span style="color: #ff914d">Design</span></h1>
                 </div>
-                <div class="dream-container">
-                    <h1 class="dream">Dream</h1>
+                <div class="pic">
+                    <img
+                        src="https://media-public.canva.com/48ulE/MAFrTN48ulE/1/s.png"
+                        alt="Brndng Agency Website Design"
+                    />
                 </div>
-                <h1>We <span style="color: #ff914d">Design</span></h1>
-            </div>
-            <div class="pic">
-                <img
-                    src="https://media-public.canva.com/48ulE/MAFrTN48ulE/1/s.png"
-                    alt="Brndng Agency Website Design"
-                />
-            </div>
-            <div class="anim1"></div>
-            <div class="anim2"></div>
-            <div class="anim3"></div>
-            <div class="anim4"></div>
-            <div class="anim6"></div>
-        </section>
-        <h1 class="header" id="about">Why Choose Us?</h1>
-        <section class="about">
-            <div class="box">
-                <h1>Holistic Brand Strategy</h1>
-                <p>
-                    We don’t just focus on visuals; we dive deep into your
-                    brand’s story, strategy, and market positioning. This means
-                    you get a brand identity that truly resonates with your
-                    audience and sets you apart from the competition.
-                </p>
-            </div>
-            <div class="box">
-                <h1>Tailored Solutions</h1>
-                <p>
-                    We understand that every business is unique, and we take the
-                    time to learn about your specific needs and goals. Our
-                    customized branding and web development solutions are
-                    designed to align perfectly with your vision, making sure
-                    you get exactly what you need to succeed.
-                </p>
-            </div>
-            <div class="box">
-                <h1>Proven Expertise and Results</h1>
-                <p>
-                    We’ve got a strong track record of delivering high-quality
-                    work and achieving real results for our clients. Our team’s
-                    experience and creative approach ensure that your brand not
-                    only looks great but also performs well in driving business
-                    growth.
-                </p>
-            </div>
-        </section>
-        <h1 class="header" id="services">What We Do?</h1>
+                <div class="anim1"></div>
+                <div class="anim2"></div>
+                <div class="anim3"></div>
+                <div class="anim4"></div>
+                <div class="anim6"></div>
+            </section>
+            <h1 class="header" id="about">Why Choose Us?</h1>
+            <section class="about">
+                <!-- <div class="box">
+                    <h1>Holistic Brand Strategy</h1>
+                    <p>
+                        We don’t just focus on visuals; we dive deep into your
+                        brand’s story, strategy, and market positioning. This
+                        means you get a brand identity that truly resonates with
+                        your audience and sets you apart from the competition.
+                    </p>
+                </div>
+                <div class="box">
+                    <h1>Tailored Solutions</h1>
+                    <p>
+                        We understand that every business is unique, and we take
+                        the time to learn about your specific needs and goals.
+                        Our customized branding and web development solutions
+                        are designed to align perfectly with your vision, making
+                        sure you get exactly what you need to succeed.
+                    </p>
+                </div>
+                <div class="box">
+                    <h1>Proven Expertise and Results</h1>
+                    <p>
+                        We’ve got a strong track record of delivering
+                        high-quality work and achieving real results for our
+                        clients. Our team’s experience and creative approach
+                        ensure that your brand not only looks great but also
+                        performs well in driving business growth.
+                    </p>
+                </div> -->
+                <div class="container">
+                    <div class="card-about">
+                        <div class="face back">
+                            <div class="content">
+                                <span class="stars"></span>
+                                <b class="desc">Holistic Brand Strategy</b>
+                                <p class="desc">
+                                    We don’t just focus on visuals; we dive deep
+                                    into your brand’s story, strategy, and
+                                    market positioning. This means you get a
+                                    brand identity that truly resonates with
+                                    your audience and sets you apart from the
+                                    competition.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="face front">
+                            <b>Holistic Brand Strategy</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card-about">
+                        <div class="face back">
+                            <div class="content">
+                                <span class="stars"></span>
+                                <b class="desc">Tailored Solutions</b>
+                                <p class="desc">
+                                    We understand that every business is unique,
+                                    and we take the time to learn about your
+                                    specific needs and goals. Our customized
+                                    branding and web development solutions are
+                                    designed to align perfectly with your
+                                    vision, making sure you get exactly what you
+                                    need to succeed.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="face front">
+                            <b>Tailored Solutions</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card-about">
+                        <div class="face back">
+                            <div class="content">
+                                <span class="stars"></span>
+                                <b class="desc">Proven Expertise and Results</b>
+                                <p class="desc">
+                                    We’ve got a strong track record of
+                                    delivering high-quality work and achieving
+                                    real results for our clients. Our team’s
+                                    experience and creative approach ensure that
+                                    your brand not only looks great but also
+                                    performs well in driving business growth.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="face front">
+                            <b>Proven Expertise and Results</b>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <h1 class="header" id="services">What We Do?</h1>
 
-        <section class="services">
-            <div class="service">
-                <img
-                    src="img/code.png"
-                    alt="Web Development"
-                    class="service-image"
-                />
-                <h1>Web development</h1>
-                <p>
-                    we specialize in creating dynamic, responsive, and
-                    user-friendly websites that meet your business needs. From
-                    single-page applications to full-scale web platforms, build
-                    solutions that are fast, secure, and optimized for
-                    performance.
-                </p>
-                <hr style="width: 60%" />
-            </div>
-            <div class="service">
-                <img src="img/ui-ux.png" alt="UI/UX" class="service-image" />
-                <h1>UI/UX DESIGN</h1>
-                <p>
-                    we craft intuitive and visually appealing user interfaces
-                    that enhance user experience and engagement. By focusing on
-                    usability, accessibility, and aesthetic appeal, design
-                    digital products that not only look great but also provide
-                    seamless navigation and functionality.
-                </p>
-                <hr style="width: 60%" />
-            </div>
-            <div class="service">
-                <img
-                    src="img/illustration.png"
-                    alt="Illustration"
-                    class="service-image"
-                />
-                <h1>Graphic design</h1>
-                <p>
-                    we create compelling visual content that communicates your
-                    brand's message and values. From logos and branding
-                    materials to digital and print media, our designs are
-                    tailored to captivate and engage your audience. Combining
-                    creativity with a strategic approach, we deliver graphics
-                    that not only stand out but also align with your business
-                    goals.
-                </p>
-                <hr style="width: 60%" />
-            </div>
-            <div class="service">
-                <img src="img/brand.png" alt="Branding" class="service-image" />
-                <h1>Branding</h1>
-                <p>
-                    we help businesses build strong and memorable brands that
-                    connect with their audience. From crafting unique brand
-                    identities and logos to developing comprehensive brand
-                    guidelines, we ensure consistency and impact across all
-                    touchpoints. we combine strategic thinking with creative
-                    execution to establish a brand presence that stands out and
-                    resonates with your target market.
-                </p>
-                <hr style="width: 60%" />
-            </div>
-        </section>
-        <section class="milestones-container">
-            <div class="milestone">
-                <img src="img/happy.png" alt="Happy Face" />
-                <h1>5</h1>
-                <p>Happy Clients</p>
-            </div>
-            <div class="milestone">
-                <img src="img/project.png" alt="Projects" />
-                <h1>8</h1>
-                <p>Projects</p>
-            </div>
-            <div class="milestone">
-                <img src="img/clock.png" alt="Experience" />
-                <h1>2</h1>
-                <p>Years of Experience</p>
-            </div>
-        </section>
-        <h1 class="header" id="projects">Meet our partners in success</h1>
-        <section class="projects">
-            <a href="https://orolibrary.com" target="_blank"
-                ><img src="img/oro.png" alt="Oro Library"
-            /></a>
-            <a href="pdf/ABCC.pdf" download target="_blank"
-                ><img src="img/abcc.png" alt="ABCC"
-            /></a>
-            <a href="pdf/مؤسسة اسرار التجارية.pdf" download target="_blank"
-                ><img src="img/asrar.png" alt="Asrar"
-            /></a>
-            <a href="https://labmasterlb.com" target="_blank"
-                ><img src="img/labmaster.png" alt="Lab Master"
-            /></a>
-            <a href="pdf/Annan Sports.pdf" target="_blank" download
-                ><img src="img/annan.png" alt="Annan Sports"
-            /></a>
-        </section>
-        <footer>
-            <div>
-                <h1 class="footer-name">Brndng.</h1>
-                <p class="sentence">You dream we design</p>
-            </div>
-            <div>
-                <h2>Headquarters</h2>
-                <p>Beirut, Lebanon</p>
-                <p>
-                    <a href="mailto:brndng.team@outlook.com" target="_blank"
-                        >brndng.team@outlook.com</a
-                    >
-                </p>
-                <a target="_blank" href="https://wa.me/96181744010"
-                    >(+961) 81 744 010</a
-                >
-            </div>
-            <div>
-                <h2>Social Media</h2>
-                <p>Follow us on social media</p>
-                <div class="social">
-                    <a
-                        target="_blank"
-                        href="https://www.instagram.com/brndng_lb/"
-                        ><img src="img/instagram.png" alt="Instagram"
-                    /></a>
-                    <a
-                        target="_blank"
-                        href="https://www.facebook.com/profile.php?id=61554057309500"
-                        ><img src="img/facebook.png" alt="Facebook"
-                    /></a>
+            <section class="services">
+                <div class="card">
+                    <img src="img/code.png" alt="Web Development" />
+                    <div class="card__content">
+                        <p class="card__title">Web Development</p>
+                        <p class="card__description">
+                            we specialize in creating dynamic, responsive, and
+                            user-friendly websites that meet your business
+                            needs. From single-page applications to full-scale
+                            web platforms, build solutions that are fast,
+                            secure, and optimized for performance.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/ui-ux.png" alt="UI/UX Design" />
+                    <div class="card__content">
+                        <p class="card__title">UI/UX Design</p>
+                        <p class="card__description">
+                            we craft intuitive and visually appealing user
+                            interfaces that enhance user experience and
+                            engagement. By focusing on usability, accessibility,
+                            and aesthetic appeal, design digital products that
+                            not only look great but also provide seamless
+                            navigation and functionality.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/illustration.png" alt="Graphic Design" />
+                    <div class="card__content">
+                        <p class="card__title">Graphic design</p>
+                        <p class="card__description">
+                            we create compelling visual content that
+                            communicates your brand's message and values. From
+                            logos and branding materials to digital and print
+                            media, our designs are tailored to captivate and
+                            engage your audience. Combining creativity with a
+                            strategic approach, we deliver graphics that not
+                            only stand out but also align with your business
+                            goals.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/brand.png" alt="Branding" />
+                    <div class="card__content">
+                        <p class="card__title">Branding</p>
+                        <p class="card__description">
+                            we help businesses build strong and memorable brands
+                            that connect with their audience. From crafting
+                            unique brand identities and logos to developing
+                            comprehensive brand guidelines, we ensure
+                            consistency and impact across all touchpoints. we
+                            combine strategic thinking with creative execution
+                            to establish a brand presence that stands out and
+                            resonates with your target market.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- <section class="services">
+                <div class="service">
+                    <img
+                        src="img/code.png"
+                        alt="Web Development"
+                        class="service-image"
+                    />
+                    <h1>Web development</h1>
+                    <p>
+                        we specialize in creating dynamic, responsive, and
+                        user-friendly websites that meet your business needs.
+                        From single-page applications to full-scale web
+                        platforms, build solutions that are fast, secure, and
+                        optimized for performance.
+                    </p>
+                    <hr style="width: 60%" />
+                </div>
+                <div class="service">
+                    <img
+                        src="img/ui-ux.png"
+                        alt="UI/UX"
+                        class="service-image"
+                    />
+                    <h1>UI/UX DESIGN</h1>
+                    <p>
+                        we craft intuitive and visually appealing user
+                        interfaces that enhance user experience and engagement.
+                        By focusing on usability, accessibility, and aesthetic
+                        appeal, design digital products that not only look great
+                        but also provide seamless navigation and functionality.
+                    </p>
+                    <hr style="width: 60%" />
+                </div>
+                <div class="service">
+                    <img
+                        src="img/illustration.png"
+                        alt="Illustration"
+                        class="service-image"
+                    />
+                    <h1>Graphic design</h1>
+                    <p>
+                        we create compelling visual content that communicates
+                        your brand's message and values. From logos and branding
+                        materials to digital and print media, our designs are
+                        tailored to captivate and engage your audience.
+                        Combining creativity with a strategic approach, we
+                        deliver graphics that not only stand out but also align
+                        with your business goals.
+                    </p>
+                    <hr style="width: 60%" />
+                </div>
+                <div class="service">
+                    <img
+                        src="img/brand.png"
+                        alt="Branding"
+                        class="service-image"
+                    />
+                    <h1>Branding</h1>
+                    <p>
+                        we help businesses build strong and memorable brands
+                        that connect with their audience. From crafting unique
+                        brand identities and logos to developing comprehensive
+                        brand guidelines, we ensure consistency and impact
+                        across all touchpoints. we combine strategic thinking
+                        with creative execution to establish a brand presence
+                        that stands out and resonates with your target market.
+                    </p>
+                    <hr style="width: 60%" />
+                </div>
+            </section> -->
+            <section class="milestones-container">
+                <div class="milestone">
+                    <img src="img/happy.png" alt="Happy Face" />
+                    <h1>5</h1>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="milestone">
+                    <img src="img/project.png" alt="Projects" />
+                    <h1>8</h1>
+                    <p>Projects</p>
+                </div>
+                <div class="milestone">
+                    <img src="img/clock.png" alt="Experience" />
+                    <h1>2</h1>
+                    <p>Years of Experience</p>
+                </div>
+            </section>
+            <h1 class="header" id="projects">Meet our partners in success</h1>
 
+            <section class="projects">
+                <a href="https://orolibrary.com" target="_blank"
+                    ><img src="img/oro.png" alt="Oro Library"
+                /></a>
+                <a href="pdf/ABCC.pdf" download target="_blank"
+                    ><img src="img/abcc.png" alt="ABCC"
+                /></a>
+                <a href="pdf/مؤسسة اسرار التجارية.pdf" download target="_blank"
+                    ><img src="img/asrar.png" alt="Asrar"
+                /></a>
+                <a href="https://labmasterlb.com" target="_blank"
+                    ><img src="img/labmaster.png" alt="Lab Master"
+                /></a>
+                <a href="pdf/Annan Sports.pdf" target="_blank" download
+                    ><img src="img/annan.png" alt="Annan Sports"
+                /></a>
+            </section>
+            <footer>
+                <div>
+                    <h1 class="footer-name">Brndng.</h1>
+                    <p class="sentence">You dream we design</p>
+                </div>
+                <div>
+                    <h2>Headquarters</h2>
+                    <p>Beirut, Lebanon</p>
+                    <p>
+                        <a href="mailto:brndng.team@outlook.com" target="_blank"
+                            >brndng.team@outlook.com</a
+                        >
+                    </p>
                     <a target="_blank" href="https://wa.me/96181744010"
-                        ><img src="img/whatsapp.png" alt="Whatsapp"
-                    /></a>
+                        >(+961) 81 744 010</a
+                    >
                 </div>
-            </div>
-        </footer>
-        <div class="copyrights">©2024 Brndng. All rights are reserved</div>
+                <div>
+                    <h2>Social Media</h2>
+                    <p>Follow us on social media</p>
+                    <div class="social">
+                        <a
+                            target="_blank"
+                            href="https://www.instagram.com/brndng_lb/"
+                            ><img src="img/instagram.png" alt="Instagram"
+                        /></a>
+                        <a
+                            target="_blank"
+                            href="https://www.facebook.com/profile.php?id=61554057309500"
+                            ><img src="img/facebook.png" alt="Facebook"
+                        /></a>
+
+                        <a target="_blank" href="https://wa.me/96181744010"
+                            ><img src="img/whatsapp.png" alt="Whatsapp"
+                        /></a>
+                    </div>
+                </div>
+            </footer>
+            <div class="copyrights">©2024 Brndng. All rights are reserved</div>
+        </section>
         <script src="index.js"></script>
 
         <script type="application/ld+json">
