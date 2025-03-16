@@ -1,0 +1,108 @@
+@media (max-width: 850px) {
+    .home {
+        flex-direction: column;
+        padding-bottom: 200px;
+    }
+    .text {
+        font-size: 30px;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 100px;
+    }
+    .pic img {
+        width: 120%;
+    }
+    .burger-bar {
+        display: block;
+    }
+    .links {
+        display: none;
+    }
+    .header {
+        font-size: 25px;
+    }
+    #projects {
+        font-size: 20px;
+    }
+    footer {
+        flex-direction: column;
+        align-items: start;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        width: calc(100% - 20px);
+    }
+    .you::before {
+        width: 90px;
+        height: 40px;
+    }
+    .dream::before {
+        width: 150px;
+        transform: translate(-50%, -50%) skew(10deg, 1deg) scale(1.1, 1)
+            rotate(-7deg);
+    }
+    .anim1 {
+        bottom: 50%;
+        left: 10%;
+    }
+    @keyframes animone {
+        0% {
+            transform: translate(-100px, 151px) rotate(0deg);
+        }
+        100% {
+            transform: translate(251px, -200px) rotate(180deg);
+        }
+    }
+    @keyframes animfour {
+        0% {
+            transform: translate(-100px, 300px) rotate(0deg);
+        }
+        100% {
+            transform: translate(100px, -100px) rotate(180deg);
+        }
+    }
+}
+@media (max-width: 500px) {
+    .milestones-container {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 50px;
+        width: fit-content;
+    }
+    .milestone h1,
+    .milestone p {
+        margin: 0 10px;
+    }
+    .milestone {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+    .milestone img {
+        width: 45px;
+    }
+    .milestone p {
+        font-size: 15px;
+    }
+}
+@media (max-width: 400px) {
+    .box {
+        flex-grow: 0;
+    }
+    #projects {
+        font-size: 17px;
+    }
+    .footer-name {
+        font-size: 20px;
+    }
+    footer h2 {
+        font-size: 15px;
+    }
+    footer p {
+        font-size: 12px;
+    }
+    .social img {
+        width: 20px;
+    }
+}
